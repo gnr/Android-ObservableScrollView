@@ -275,8 +275,15 @@ public class ObservableRecyclerView extends RecyclerView implements Scrollable {
         View firstVisibleChild = getChildAt(0);
         if (firstVisibleChild != null) {
             int baseHeight = firstVisibleChild.getHeight();
-            int position = y / baseHeight;
-            scrollVerticallyToPosition(position);
+            int position = baseHeight == 0 ? y : y / baseHeight;
+            // NOTE: if the first visible child is very tall but we are just trying to scroll
+            //       past the dummy first item under the toolbar, then need to skip over that first item
+            if(y > 0 && y < baseHeight && position == 0) {
+                scrollVerticallyToPosition(1);
+            }
+            else {
+                scrollVerticallyToPosition(position);
+            }
         }
     }
 
