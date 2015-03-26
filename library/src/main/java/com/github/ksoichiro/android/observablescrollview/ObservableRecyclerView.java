@@ -319,6 +319,10 @@ public class ObservableRecyclerView extends RecyclerView implements Scrollable {
         mChildrenHeights = new SparseIntArray();
     }
 
+    public int getPrevFirstVisiblePosition() {
+        return mPrevFirstVisiblePosition;
+    }
+
     /**
      * This saved state class is a Parcelable and should not extend
      * {@link android.view.View.BaseSavedState} nor {@link android.view.AbsSavedState}
