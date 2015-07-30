@@ -19,9 +19,6 @@ dependencies {
     androidTestCompile ('com.android.support:appcompat-v7:22.2.1') {
         exclude module: 'support-v4'
     }
-    androidTestCompile ('com.nineoldandroids:library:2.4.0') {
-        exclude module: 'support-v4'
-    }
 }
 
 android {
