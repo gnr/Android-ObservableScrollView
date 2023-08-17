@@ -18,11 +18,12 @@ package com.github.ksoichiro.android.observablescrollview;
 
 import android.os.Bundle;
 import android.os.Parcelable;
+import android.util.SparseArray;
+import android.view.ViewGroup;
+
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
-import android.util.SparseArray;
-import android.view.ViewGroup;
 
 /**
  * FragmentStatePagerAdapter that caches each pages.
