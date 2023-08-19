@@ -20,7 +20,7 @@ dependencies {
 android {
     namespace "com.github.ksoichiro.android.observablescrollview"
 
-    compileSdkVersion 32
+    compileSdkVersion 33
 
     defaultConfig {
         minSdkVersion 16
